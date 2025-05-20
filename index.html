@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harsh Panchal | Software Developer</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script>
+    function toggleDarkMode() {
+      document.documentElement.classList.toggle('dark');
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .gradient-bg {
+      background: linear-gradient(135deg, #1e3a8a, #9333ea);
+    }
+    .fade-in {
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .glass-card {
+      backdrop-filter: blur(16px);
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .glass-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+    }
+    .floating {
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+  <script src="https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function(e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
+          });
+        });
+      });
+    });
+  </script>
+</head>
+<body class="bg-gradient-to-br from-indigo-100 to-purple-200 text-gray-800 dark:from-gray-900 dark:to-gray-800 dark:text-gray-200">
+  <header class="gradient-bg text-white py-10 shadow-2xl">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+      <h1 class="text-4xl font-extrabold tracking-tight floating">Harsh Panchal</h1>
+      <div class="flex items-center space-x-6 mt-4 md:mt-0">
+        <nav class="space-x-6 text-lg">
+          <a href="#about" class="hover:text-yellow-300">About</a>
+          <a href="#skills" class="hover:text-yellow-300">Skills</a>
+          <a href="#projects" class="hover:text-yellow-300">Projects</a>
+          <a href="#experience" class="hover:text-yellow-300">Experience</a>
+          <a href="#contact" class="hover:text-yellow-300">Contact</a>
+          <a href="Harsh_Panchal_Resume_2024.docx" download class="bg-green-500 text-white px-4 py-2 rounded shadow hover:bg-green-600 transition transform hover:scale-105">⬇️ Resume</a>
+
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="py-24 text-center fade-in bg-white dark:bg-gray-900">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-5xl font-extrabold mb-6 animate-pulse">👋 Welcome!</h2>
+      <p class="text-2xl leading-relaxed">I'm <strong>Harsh Panchal</strong>, a creative and passionate Senior Software Developer specializing in modern, intuitive, and scalable applications using <strong>ASP.NET, JavaScript</strong>, and advanced web technologies.</p>
+      <div class="mt-8">
+        <a href="Harsh_Panchal_Resume_2024.docx" download class="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-full shadow-lg text-xl transition">⬇️ Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="py-24 bg-gradient-to-r from-purple-100 via-pink-100 to-yellow-100 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">🚀 Featured Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div class="glass-card p-6 rounded-xl">
+          <img src="img/budget.png" alt="Budget Tracker" class="rounded mb-4 shadow-md">
+          <h3 class="text-2xl font-semibold mb-2">Budget Tracker System</h3>
+          <p>Manage personal and team finances with export tools, interactive modals, and real-time calendar tracking. Built with ASP.NET & Tailwind.</p>
+          <a href="https://budgettrackermch-gweccfh5ccb6bxb4.centralus-01.azurewebsites.net/" target="_blank" class="mt-4 inline-block bg-blue-700 text-white px-6 py-2 rounded-full hover:bg-blue-800 transition">🔗 View Live Demo</a>
+        </div>
+        <div class="glass-card p-6 rounded-xl">
+          <img src="img/e.png" alt="Appointment System" class="rounded mb-4 shadow-md">
+          <h3 class="text-2xl font-semibold mb-2">E-commerce: StyleMart </h3>
+          <p>Cross-platform app designed with user experience and business needs in mind.</p>
+          <a href="https://kzml8lupeeq0ynxgzinr.lite.vusercontent.net/" target="_blank" class="mt-4 inline-block bg-blue-700 text-white px-6 py-2 rounded-full hover:bg-blue-800 transition">🔗 View Live Demo</a>
+        </div>
+        <div class="glass-card p-6 rounded-xl">
+          <img src="img/dssc.png" alt="DSSC App" class="rounded mb-4 shadow-md">
+          <h3 class="text-2xl font-semibold mb-2">DSSC Legal Application</h3>
+          <p>Secure legal platform for record search and access with file upload and form handling via Telerik UI.</p>
+          <a href="http://new.diligentsearch.org/" target="_blank" class="mt-4 inline-block bg-blue-700 text-white px-6 py-2 rounded-full hover:bg-blue-800 transition">🔗 View Live Demo</a>
+        </div>
+        <div class="glass-card p-6 rounded-xl">
+          <img src="img/hotel_dashboard.png"Parking System" class="rounded mb-4 shadow-md">
+          <h3 class="text-2xl font-semibold mb-2">Hotel Management Dashboard</h3>
+          <p>Smart dashboard for bookings, reports, and staff management—fully responsive and optimized for performance.</p>
+          <a href="https://your-live-demo-link.com" target="_blank" class="mt-4 inline-block bg-blue-700 text-white px-6 py-2 rounded-full hover:bg-blue-800 transition">🔗 View Live Demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="github" class="py-20 bg-gray-900 text-center text-white">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-6">📂 GitHub Repositories</h2>
+      <p class="mb-6">Browse through my featured open-source contributions and passion projects on GitHub. These showcase my commitment to clean code, collaboration, and building reusable components.</p>
+      <a href="https://github.com/Kingtechharsh" target="_blank" class="inline-block bg-white text-black px-8 py-3 rounded-full hover:bg-gray-200 transition shadow-lg">🔗 github.com/Kingtechharsh</a>
+    </div>
+  </section>
+  </section>
+  <section id="experience" class="py-16 bg-gray-100">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-10">💼 Experience</h2>
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-xl font-semibold">Senior Software Developer – KingTech Inc.</h3>
+          <p class="text-sm text-gray-600">Mar 2024 – Present</p>
+          <p>Led full-stack development for enterprise applications in finance, scheduling, and legal domains.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold">Software Engineer – Legislative Information System</h3>
+          <p class="text-sm text-gray-600">Jan 2021 – Present</p>
+          <p>Developed government tools and desktop apps to support operational efficiency and data processing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="py-20 bg-white dark:bg-gray-900 text-center">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-12">💬 Testimonials</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div class="p-6 rounded-xl shadow-xl bg-gray-100 dark:bg-gray-800">
+          <p class="italic">“Harsh is one of the most dedicated developers I’ve worked with. His ability to deliver high-quality features on time is unmatched.”</p>
+          <p class="mt-4 font-semibold">– Team Lead, KingTech Inc.</p>
+        </div>
+        <div class="p-6 rounded-xl shadow-xl bg-gray-100 dark:bg-gray-800">
+          <p class="italic">“His front-end and database optimization skills helped us complete the project ahead of schedule with better performance.”</p>
+          <p class="mt-4 font-semibold">– Project Manager, LIS</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="contact" class="py-20 bg-gradient-to-r from-indigo-100 to-purple-200 dark:from-gray-800 dark:to-gray-700 text-center">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-8">📫 Get in Touch</h2>
+      <form class="space-y-6">
+        <div>
+          <input type="text" placeholder="Your Name" class="w-full px-5 py-3 rounded-lg shadow border border-gray-300 dark:border-gray-700 dark:bg-gray-800" required>
+        </div>
+        <div>
+          <input type="email" placeholder="Your Email" class="w-full px-5 py-3 rounded-lg shadow border border-gray-300 dark:border-gray-700 dark:bg-gray-800" required>
+        </div>
+        <div>
+          <textarea rows="5" placeholder="Your Message" class="w-full px-5 py-3 rounded-lg shadow border border-gray-300 dark:border-gray-700 dark:bg-gray-800" required></textarea>
+        </div>
+        <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-full font-semibold shadow">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="contact" class="py-16 bg-white text-center">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-4">📫 Contact</h2>
+      <p class="text-lg">Want to collaborate or work together? Let’s connect.</p>
+      <p class="mt-4">📧 <a href="mailto:hpanchal4@hotmail.com" class="text-blue-600 hover:underline">hpanchal4@hotmail.com</a></p>
+      <p>🔗 <a href="https://www.linkedin.com/in/harshbpanchal/?trk=opento_sprofile_details" class="text-blue-600 hover:underline">linkedin.com/in/harshbpanchal</a></p>
+    </div>
+  </section>
+
+
+ 
+  <footer class="bg-gray-900 text-gray-400 py-6 text-center text-sm">
+    &copy; 2025 Harsh Panchal. Designed with ❤️ and Tailwind CSS.
+  </footer>
+</body>
+</html>
